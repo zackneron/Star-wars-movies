@@ -8,7 +8,6 @@ To be able to run this project, feel free to follow the steps as explained below
 Clone this repo :
 `git clone https://github.com/zackneron/Star-wars-movies`
 
-Navigate in list-of-star-wars-movies folder.
 
 ## Project Setup
 

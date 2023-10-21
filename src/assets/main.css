@@ -1,0 +1,186 @@
+:root {
+  --white-text: #ffffff;
+  --black-text: #000000;
+  --bright-text: #ffc107;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000e6;
+  padding: 0;
+  margin: 0;
+  color:#b5b7b7;
+}
+
+.banner {
+  height: 500px;
+  object-fit: cover;
+
+  & img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.main-heading {
+  color: var(--bright-text); 
+  background-image: -webkit-linear-gradient(0deg, var(--bright-text) 10%, var(--white-text) 38%, #ffc917 56%); 
+  background-clip: text; 
+  font-weight: 700;
+  -webkit-background-clip: text; 
+  text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;    
+}
+
+.btn:hover {
+  color: var(--white-text);
+  background-color: var(--black-text);
+  border-color: var(--black-text);
+}
+.btn-outline-warning:hover {
+  color: var(--black-text);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bright-text);
+}
+
+.login:hover {
+  color: var(--bright-text) !important;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.movie-bg:nth-child(1) .card  .movie--image {
+  background-image: url('@/assets/A_New_Hope.jpg');
+}
+.movie-bg:nth-child(2) .card  .movie--image {
+  background-image: url('@/assets/The_Empire_Strikes_Back.jpg');
+}
+.movie-bg:nth-child(3) .card  .movie--image {
+  background-image: url('@/assets/Return_of_the_Jedi.jpg');
+}
+.movie-bg:nth-child(4) .card  .movie--image {
+  background-image: url('@/assets/The_Phantom_Menace.jpg');
+}
+.movie-bg:nth-child(5) .card  .movie--image {
+  background-image: url('@/assets/Attack_of_the_Clones.jpg');
+}
+.movie-bg:nth-child(6) .card  .movie--image {
+  background-image: url('@/assets/Revenge_of_the_Sith.jpg');
+}
+
+.movie__card-title {
+  color: var(--white-text);
+}
+.movie--image {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+.movie--content {
+  min-height: 350px;
+}
+
+.lists {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1.8rem;
+  list-style: none;
+
+  & li:before {
+    content: url('@/assets/star.png');
+    position: absolute;
+    left: -30px;
+  }
+
+  & li {
+    flex: 0 0 calc(100%);
+    max-width: calc(100%);
+    position: relative;
+  }
+}
+
+.loader-container {
+  height: 60vh;
+}
+.loader{
+  display: inline-block;
+  text-align: center;
+  line-height: 86px;
+  text-align: center;
+  position: relative;
+  padding: 0 48px;
+  font-size: 48px;
+  color: var(--bright-text);
+}
+.loader:before, .loader:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: currentColor;
+  position: absolute;
+  animation: load .7s infinite alternate ease-in-out;
+  top: 0;
+}
+.loader:after {
+  top: auto;
+  bottom: 0;
+}
+@keyframes load {
+  0% {
+    left: 0;
+    height: 43px;
+    width: 15px;
+    transform: translateX(0)
+  }
+  50% {
+    height: 10px;
+    width: 40px
+  }
+  100% {
+    left: 100%;
+    height: 43px;
+    width: 15px;
+    transform: translateX(-100%)
+  }
+}
+
+
+/* Media Query */
+
+@media (min-width: 768px) {
+  .wrapper {
+    margin-bottom: 80px;
+  }
+  .banner {
+    height: 300px;
+  }
+
+  .lists {
+    & li {
+      flex: 0 0 calc(50%);
+      max-width: calc(50%);
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    margin-bottom: 145px;
+  }
+  .banner {
+    height: 400px;
+  }
+
+  .lists {
+    & li {
+      flex: 0 0 calc(33.3333%);
+      max-width: calc(33.3333%);
+    }
+  }
+}

@@ -1,8 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="banner">
-      <img src="@/assets/star-wars-bg.jpg" alt="banner image"  class="d-inline-block align-text-top">
-    </div>
+    <Banner />
     <div class="container mt-5 mb-5 bg-black">
       <div class="row justify-content-md-center">
         <div class="col-12 col-lg-10">
@@ -43,11 +41,13 @@
 <script>
 import axios from 'axios';
 import Loader from '@/components/Loader.vue'
+import Banner from '@/components/Banner.vue'
 import Lists from '@/components/Lists.vue'
 export default {
   name: 'MovieDetails',
   components: {
     Loader,
+    Banner,
     Lists
   },
   props: 

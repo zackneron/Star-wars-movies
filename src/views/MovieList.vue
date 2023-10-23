@@ -56,7 +56,7 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0),
-    axios.get('https://swapi.dev/api/films')
+    axios.get('api/films')
     .then(response => {
       this.movies = response.data.results;
     })
